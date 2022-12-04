@@ -6,8 +6,9 @@
 name: Check dist/
 
 on:
-  push:
   workflow_dispatch:
+  schedule:
+    - cron: '30 7 * * *'
 
 jobs:
   check-dist:
